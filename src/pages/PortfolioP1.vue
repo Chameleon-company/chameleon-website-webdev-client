@@ -10,7 +10,7 @@
         <p>This project delivers an education portal which demonstrates how to leverage Open Data using real world scenarios that may be of interest to industry, government, and researchers. Its long-term goal is to increase the usage of City of Melbourne Open Datasets and drive increased investment across the City of Melbourne council area. </p>
         <p>The short term (trimester) deliverable will be:  </p>
         <ul>
-          <li>-	Add additional data science use cases to the Melbourne Open Data Playground portal and GitHub Repo.</li> 
+          <li>-	Add additional data science use cases to the Melbourne Open Data Playground portal and GitHub Repo.</li>
           <li>-	Migrate the Melbourne Open Data Playground portal from AWS to Google Cloud Platform (GCP)</li>
           <li>-	Ensure the Melbourne Open Data Playground portal can run on mobile devices</li>
           <li>-	Make Minor cosmetic improvements to the Melbourne Open Data Playground portal</li>
@@ -20,9 +20,9 @@
           <li>-	Preparing the Melbourne Open Data Playground portal and GitHub repository for use by the public</li>
           <li>-	Migrating the Pedestrian data use cases and Jupyter notebooks to support a new data provider</li>
           <li>-	Migrating the Open Data access API from SOCRATA to a new platform</li>
-        </ul>  
+        </ul>
         <div class="video-p1">
-          <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&playerId=kaltura_player&entry_id=1_5msw6mc6&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_6ug7f8q9" width="500" height="281" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" title="Chameleon Company"></iframe>
+          <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&playerId=kaltura_player&entry_id=1_tu93x3dv&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_uo8cf3a5" width="500" height="281" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" title="SEBE IT Capstone 2022 T1 - Chameleon City of Melbourne Project Showcase Video"></iframe>
         </div>
       </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   name: "PortfolioP1",
   data() {
     return {
-    
+
     }
   }
 }
@@ -82,11 +82,11 @@ export default {
       min-height:500px;
       margin-top:40px;
 
-    } 
+    }
     .video-p1 iframe {
       width:100%;
       min-height:500px;
-    } 
+    }
   }
 }
 </style>
