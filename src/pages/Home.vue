@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     <div class="first">
+      <div class="loginMessage underline" v-if="$store.state.isUserLoggedIn"><span>{{$store.state.firstName}}'s logged in</span></div>
       <div class="title">Welcome to Chameleon</div>
       <div class="explain">Striving to create a smarter world!</div>
-      
 
-      <div class="button" @click="showLogin">Login</div>
+      <div v-if="$store.state.isUserLoggedIn == false" class="button" @click="showLogin">Login</div>
+      <div v-else-if="$store.state.isUserLoggedIn" class="button" @click="logout"> Logout</div>
       <div class="right">
         <div class="rightIcon" data-toggle="modal" data-target="#exampleModal"  @click="showModal1">
           <img class="rightIcon2" :src="Ellipse" alt="" />
@@ -226,7 +227,7 @@
             <button class="button button4">Subscribe Now</button>
         </div>
         <div class="@chameloen"></div>
-        
+
     </div>
   </div>
 </template>
@@ -264,18 +265,32 @@ export default {
       image2,
       image,
       sendimage,
-//<<<<<<< HEAD
-//=======
-      //logo,
+      logo,
+      it,
+      tt,
+      wa,
+      fb,
+      msger,
+      yt,
+      Multiply,
+      token: $store.state.isUserLoggedIn
     };
   },
+  mounted() {},
   methods: {
      showModal1() {
+      $("#exampleModal").modal("show");
     },
     hideModal1() {
+      $("#exampleModal").modal("hide");
     },
     showLogin() {
-       $(location).attr('href','#/web/login')
+      $(location).attr('href','#/web/login')
+    },
+      logout() {
+        this.token = false;
+        this.$store.dispatch("setToken", this.token);
+        this.$router.push("/web/home");
     },
     showTerms() {
       $(location).attr('href','#/web/terms')
@@ -308,7 +323,29 @@ export default {
     width: 35px;
     height: 35px;
   }
-  
+
+}
+
+.loginMessage{
+  margin-top: 25px;
+  margin-left: 35px;
+  font-weight: 500;
+
+  text-decoration-color: black;
+}
+
+span {
+  color: black;
+}
+
+.underline {
+  border-bottom: 6px solid currentColor;
+  display: inline-block;
+  line-height: 1.5;
+
+  color: #99c854;
+
+
 }
 .first {
   background-image: url("../assets/images/Image1.png");

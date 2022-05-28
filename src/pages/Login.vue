@@ -84,10 +84,9 @@ export default {
           password: this.password,
         });
         this.error = response.data.error;
-        this.$store.dispatch("setToken", response.data.token );
+        this.$store.dispatch("setToken", response.data.token);
         this.$store.dispatch("setUser", response.data.user);
-        console.log(response.data.firstName)
-        //localStorage.setItem('token', response.data.token);
+        this.$store.dispatch("setFirstName", response.data.firstName);
       } catch (error) {
         console.log(error, error.response);
       }
