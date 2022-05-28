@@ -5,7 +5,7 @@
         <div class="avator-div">
           <div class="admin-title">Profile Settings</div>
 
-          <div class="admin-img-sub-title">Change Profile Picture Now</div>
+          <div class="admin-img-sub-title">Change Profile Picture</div>
         </div>
 
         <b-form-file

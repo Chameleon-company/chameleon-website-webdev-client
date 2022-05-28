@@ -7,7 +7,6 @@
 
 
 <script>
-//HERE 
   export default {
   }
 </script>

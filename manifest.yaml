@@ -2,7 +2,7 @@ applications:
     - name: cw-client
       path: ./dist
       buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-      random-route: false
+      random-route: true
       memory: 512M
       env:
           FORCE_HTTPS: true

@@ -76,9 +76,9 @@ async register() {
           confirmPassword: this.confirmPassword
 
         })
-        this.$store.dispatch('setToken', response.data.token)
-        this.$store.dispatch('setUser', response.data.user)
         this.$router.push('/web/login');
+        //this.$store.dispatch('setToken', response.data.token);
+        //this.$store.dispatch('setUser', response.data.user);
       } catch (error) {
         this.error = error.response.data.error
       }
