@@ -3,16 +3,6 @@
     <div class="first">
       <div class="title">Welcome to Chameleon</div>
       <div class="explain">Striving to create a smarter world!</div>
-      <div class="button">
-        <a
-          href="#/web/login"
-          type="button"
-          style="width: 130px"
-          class="btn btn-warning active"
-        >
-          Login
-        </a>
-      </div>
 
       <div class="button" @click="showLogin">Login</div>
       <div class="right">
@@ -235,7 +225,7 @@
             <button class="button button4">Subscribe Now</button>
         </div>
         <div class="@chameloen"></div>
-        
+
     </div>
   </div>
 </template>
@@ -249,9 +239,7 @@ const Ellipse1 = require("@/assets/images/Ellipse1.png");
 const image2 = require("@/assets/images/image2.png");
 const image = require("@/assets/images/Image.png");
 const sendimage = require("@/assets/images/Group18.png");
-<<<<<<< HEAD
 import {} from "axios";
-=======
 const fb = require("@/assets/images/fb.png");
 const wa = require("@/assets/images/wa.png");
 const yt = require("@/assets/images/yt.png");
@@ -261,7 +249,6 @@ const it = require("@/assets/images/instagram.png");
 const logo = require("@/assets/images/logo2.png");
 const Multiply = require("@/assets/images/Multiply.png");
 
->>>>>>> 89635025d4f1d87616cb077b5fa72362ba8c387d
 
 export default {
   name: "Home",
@@ -276,8 +263,6 @@ export default {
       image2,
       image,
       sendimage,
-<<<<<<< HEAD
-=======
       logo,
       it,
       tt,
@@ -286,7 +271,6 @@ export default {
       msger,
       yt,
       Multiply
->>>>>>> 89635025d4f1d87616cb077b5fa72362ba8c387d
     };
   },
   mounted() {},
@@ -331,7 +315,7 @@ export default {
     width: 35px;
     height: 35px;
   }
-  
+
 }
 .first {
   background-image: url("../assets/images/Image1.png");
