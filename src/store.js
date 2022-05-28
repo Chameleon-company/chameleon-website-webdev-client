@@ -7,12 +7,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: true,
   state: {
+    //firstName: null,
     token: null,
     user: null,
     isUserLoggedIn: false
   },
   mutations: {
-    setToken (state, token) {
+    setToken ( state, token) {
+      
       state.token = token
       console.log('token state changed:', state.token)
       if (token) {
@@ -23,14 +25,19 @@ export default new Vuex.Store({
     },
     setUser (state, user) {
       state.user = user
-    }
+    },
+    // setFirstName (state, firstName) {
+    //   state.user = user
+    // }
   },
   actions: {
-    setToken ({commit}, token) {
+    setToken ({commit}, token, firstName) {
+      //commit('setFirstName', firstName)
       commit('setToken', token)
     },
     setUser ({commit}, user) {
       commit('setUser', user)
+      
     }
   }
 })
