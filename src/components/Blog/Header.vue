@@ -43,7 +43,7 @@ header {
 
     .center {
         h3 {
-            font-size: 32px;
+            font-size: 40px;
             font-style: italic;
             font-weight: 400;
             margin: 0;
@@ -55,7 +55,7 @@ header {
 
         h1 {
             color: #9acb48;
-            font-size: 72px;
+            font-size: 50px;
             margin: 0;
         }
 
@@ -105,4 +105,42 @@ header {
     }
 
 }
+@media(max-width:800px){
+  header {
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .right{
+    margin-top:10px;
+  }
+
+  .search-bar{
+    width: 100%;
+  }
+
+  .center {
+      h3 {
+          font-size: 50px;
+          font-style: italic;
+          font-weight: 400;
+          margin: 0;
+
+          &.bottom {
+              text-align: right;
+          }
+      }
+
+      h1 {
+          color: #9acb48;
+          font-size: 10px;
+          margin: 0;
+      }
+
+  }
+
+
+}
+
+
 </style>

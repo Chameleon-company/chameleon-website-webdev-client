@@ -3,7 +3,7 @@
     <div class="first">
       <div class="loginMessage underline" v-if="$store.state.isUserLoggedIn"><span>{{$store.state.firstName}}'s logged in</span></div>
       <div class="title">Welcome to Chameleon</div>
-      <div class="explain">Striving to create a smarter world!</div>
+      <div class="explain">Striving to create a smarter world! </div>
 
       <div v-if="$store.state.isUserLoggedIn == false" class="button" @click="showLogin">Login</div>
       <div v-else-if="$store.state.isUserLoggedIn" class="button" @click="logout"> Logout</div>
@@ -174,11 +174,11 @@
     </div>
 
     <div class="footer">
-       
+
         <div class="footer-image">
           <img class="logo" :src="logo" alt="" />
         </div>
-        
+
         <div class="footer-first-heading">
           <img class="footer-tail" :src="pngwing1" alt="" />
           <div class="footer-first">CHAMELEON</div>
@@ -188,7 +188,7 @@
             <div class="footer-writing">+61 3 9244 6100</div>
             <div class="footer-writing">chameleon@deakin.edu.au</div>
         </div>
-        
+
         <div class="footer-second-heading">
           <div class="footer-second">EXPLORE</div>
             <div><a href="#/web/our-services"> Our services </a></div>
@@ -196,7 +196,7 @@
             <div><a href="#/web/resources"> Resources </a></div>
             <div><a href="#/web/about-us"> About us </a></div>
         </div>
-        
+
         <div class="footer-third-heading">
           <div class="footer-third">HELPFUL LINKS</div>
             <div><a href="#/web/privacy">Privacy Policy</a></div>
@@ -684,5 +684,5 @@ a {
     margin-left: 130px;
     opacity: 25%;
   }
-} 
+}
 </style>
