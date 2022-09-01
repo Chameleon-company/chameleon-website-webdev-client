@@ -1,5 +1,17 @@
 <template>
       <div class="three">
+        <!-- <img class="logo" :src="Logo" alt="">
+        <div class="box">
+          <img class="more" :src="Baob" @click="show" alt="">
+          <div class="port" v-if="isshow">
+            <li><a href="#/web">Portfolio</a></li>
+            <li><a href="#/web">Home</a></li>
+            <li><a href="#/web">Blog</a></li>
+            <li><a href="#/web">Our services</a></li>
+            <li><a href="#/web">Resources</a></li>
+          </div>
+        </div> -->
+        <Head></Head>
       <div class="head">
         <div></div>
         <div>About Us</div>
@@ -44,6 +56,9 @@ const Building = require("@/assets/images/building.png");
 const Globe = require("@/assets/images/globe.png");
 const User = require("@/assets/images/user.png");
 
+const Logo= require("@/assets/images/logo2.png");
+const Baob= require("@/assets/images/menu.png");
+import Head from "./Head.vue"
 export default {
   name: "AboutUs",
   data() {
@@ -51,18 +66,58 @@ export default {
       Hand,
       Building,
       Globe,
-      User
+      User,
+      Logo,
+      Baob,
+      isshow:false,
     };
   },
   mounted() {},
   methods: {
+    show(){
+      if(this.isshow){
+        this.isshow=false;
+      }else{
+        this.isshow=true;
+      }
+    }
     },
+  components:{
+    Head
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .three {
-  padding: 40px 40px;
+  .port{
+    position: absolute;
+    right: 10px;
+    margin-top: 50px;
+  }
+  padding: 10px 40px;
+  .box{
+    float: right;
+  }
+  .port li{
+    list-style: none;
+
+    a{
+      text-decoration: none;
+      color:black;
+    }
+  }
+ 
+  .logo{
+    width: 80px;
+    height: 80px;
+  }
+  .more{
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 10px;
+  }
   .head {
     display: flex;
     align-items: center;
@@ -73,7 +128,7 @@ export default {
     }
     div:nth-child(2) {
       padding: 0 20px;
-      font-size: 50px;
+      font-size: 30px;
       font-weight: bold;
     }
     div:last-child {
@@ -84,14 +139,15 @@ export default {
   }
   .main {
     margin-top: 40px;
-    font-size: 36px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 
     p {
-      font-size: 24px;
+      font-size: 18px;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
+      text-indent: 2em;
     }
    
    .li{
@@ -101,16 +157,16 @@ export default {
    }
    
    .imgtxt-container{
-     width:332px;
-     height: auto;
-     float: left;
-     margin-bottom: 50px;
+    img{
+        width:80px;
+        height:80px;
+    }
+    //  float: left;
      text-align: center;
      margin-right: 100px;
    }
    .img-txt{
-     float:right;
-     margin-top: 60px;
+     margin-top: 20px;
    }
 
    .li-container{
@@ -118,13 +174,13 @@ export default {
    }
    .video-p1 {
       width:100%;
-      min-height:500px;
+      min-height:200px;
       margin-top:40px;
 
     } 
     .video-p1 iframe {
       width:100%;
-      min-height:500px;
+      min-height:200px;
     } 
   }  
 }
