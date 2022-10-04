@@ -6,6 +6,7 @@
       <div class="explain">Striving to create a smarter world!</div>
 
       <div v-if="$store.state.isUserLoggedIn == false" class="button" @click="showLogin">Login</div>
+      <div v-if="$store.state.isUserLoggedIn == false" class="buttons" @click="showRegister">Sign Up</div>
       <div v-else-if="$store.state.isUserLoggedIn" class="button" @click="logout"> Logout</div>
       <div class="right">
         <div class="rightIcon" data-toggle="modal" data-target="#exampleModal"  @click="showModal1">
@@ -287,6 +288,9 @@ export default {
     showLogin() {
       $(location).attr('href','#/web/login')
     },
+    showRegister() {
+      $(location).attr('href','#/web/register')
+    },
       logout() {
         this.token = false;
         this.$store.dispatch("setToken", this.token);
@@ -347,13 +351,18 @@ span {
 
 
 }
+
+@media all and (min-width: 501px)
+{
 .first {
   background-image: url("../assets/images/Image1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: "Poppins", sans-serif;
   height: 90vh;
+  margin-bottom: 60px;
   .title {
+    display: flex;
     font-size: 64px;
     font-weight: 600;
     color: #343434;
@@ -361,12 +370,13 @@ span {
     padding-top: 150px;
   }
   .explain {
+    display: flex;
     font-weight: 500;
     margin-top: 35px;
     width: 460px;
     font-size: 36px;
     padding-left: 70px;
-    padding-top: 0;
+    padding-top: 0px;
     padding-bottom: 15px;
   }
   .button {
@@ -377,6 +387,8 @@ span {
     line-height: 42px;
     color: #fff;
     border-radius: 20px;
+    padding-top: 0px;
+    padding-bottom: 15px;
     &:hover {
       border: 2px solid #faad4a;
       background: #fff;
@@ -387,6 +399,28 @@ span {
     display: block;
     float: left;
   }
+
+  .buttons {
+    width: 150px;
+    height: 40px;
+    background: #faad4a;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 20px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    &:hover {
+      border: 2px solid #faad4a;
+      background: #fff;
+      color: #faad4a;
+    }
+    box-shadow: 0px -1px 2px 0 #065881 inset, 0px 1px 1px 1px #ccc, 0 0 0 1px #ababab, 0px 2px 1px 0px #ddd;
+    margin-left: 85px;
+    display: block;
+    float: left;
+  }
+  
   .button-cover {
     width: 150px;
     background: #ff9500;
@@ -421,9 +455,125 @@ span {
     }
   }
 }
+}
+
+@media all and (max-width: 501px)
+{
+.first {
+  background-image: url("../assets/images/Image1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Poppins", sans-serif;
+  height: 90vh;
+  margin-bottom: 60px;
+  .title {
+ 
+    font-size: 40px;
+    font-weight: 700;
+    width: 400px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #343434;
+    padding-left: 80px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .explain {
+  
+    font-weight: 600;
+    width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+  .button {
+    width: 150px;
+    height: 40px;
+    background: #faad4a;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 20px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    &:hover {
+      border: 2px solid #faad4a;
+      background: #fff;
+      color: #faad4a;
+    }
+    box-shadow: 0px -1px 2px 0 #065881 inset, 0px 1px 1px 1px #ccc, 0 0 0 1px #ababab, 0px 2px 1px 0px #ddd;
+    margin: 0 auto;
+    margin-top: 50 px;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    width: 150px;
+    height: 40px;
+    background: #faad4a;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 20px;
+    padding-top: 0px;
+    
+    padding-bottom: 15px;
+    &:hover {
+      border: 2px solid #faad4a;
+      background: #fff;
+      color: #faad4a;
+    }
+    box-shadow: 0px -1px 2px 0 #065881 inset, 0px 1px 1px 1px #ccc, 0 0 0 1px #ababab, 0px 2px 1px 0px #ddd;
+    
+    margin: auto;
+  }
+  
+  .button-cover {
+    width: 150px;
+    background: #ff9500;
+    color: #fff;
+    margin-top: 10px;
+  }
+  .right {
+    text-align: right;
+    text-align: -webkit-right;
+    padding-right: 40px;
+    margin-top: 100px;
+    .rightIcon {
+      position: relative;
+      width: 123px;
+      height: 87px;
+    }
+
+    .rightIcon3 {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+    .modal-footer {
+      justify-content: center;
+    }
+    .modal-title {
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .modal-content {
+      background: #99c854;
+    }
+  }
+}
+}
 .second {
   padding: 40px 40px;
-  margin-top: 60px;
+  margin-top: 250px;
   .head {
     display: flex;
     align-items: center;
